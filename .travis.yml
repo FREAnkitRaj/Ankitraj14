@@ -1,0 +1,12 @@
+language: java
+jdk: 17
+
+script:
+  - mvn clean install
+
+notifications:
+  webhooks:
+    urls:
+      https://defaulta0783b62a4384df4b01a1922ce21ddb.e.environment.api.preprod.powerplatform.com:443/powerautomate/automations/direct/workflows/9df304f84e2b423683309574778c7b1f/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vUART3sqP0t4a_31VpeiiKBLEWcyMWA4iPRZjhmfXoI
+    on_success: always
+    on_failure: always
